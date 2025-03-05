@@ -22,6 +22,20 @@
             align-items: center;
             transition: background 0.5s ease-in-out;
         }
+        #digital-clock {
+            font-size: 24px;
+            font-weight: bold;
+            color: rgb(255, 255, 255);
+            font-family: 'Georgia', serif;
+            background: rgba(187, 133, 16, 0.7);
+            padding: 10px 20px;
+            border-radius: 8px;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
         .platform-logo {
             width: 100px;
             height: 100px;
@@ -124,6 +138,7 @@
 </head>
 <body>
     <!-- AI Promt: Username ve password için kutucuk oluşturup nasıl yazı yazabilirim-->
+    <div id="digital-clock"></div>
     <div class="platform-logo" onclick="playGifAndShowLogin()">
         <span class="platform-text">9¾</span>
     </div>
@@ -147,6 +162,29 @@
             let loginContainer = document.getElementById('loginContainer');
             loginContainer.style.display = "block";
         }
+        function updateClock() {
+            let now = new Date();
+            let hours = now.getHours().toString().padStart(2, '0');
+            let minutes = now.getMinutes().toString().padStart(2, '0');
+            let seconds = now.getSeconds().toString().padStart(2, '0');
+            let timeString = `${hours}:${minutes}:${seconds}`;
+    
+            document.getElementById('digital-clock').textContent = timeString;
+}
+
+setInterval(updateClock, 1000); // Update clock every second
+updateClock(); // Initialize clock immediately
+
+        document.addEventListener("keydown", function(event) {
+            if (event.key === "H" || event.key === "h") {
+                let forms = document.querySelectorAll("input, button");
+                forms.forEach(form => {
+                    form.style.display = form.style.display === "none" ? "block" : "none";
+                });
+            }
+        });
+
+
     </script>
 </body>
 </html>
