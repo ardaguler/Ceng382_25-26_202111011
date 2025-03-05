@@ -1,0 +1,152 @@
+<!--KODUN ÇALIŞMAYA BAŞLAMASI İÇİN PLATFORM İCONUNA TIKLANMASI GEREKİYOR-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platform 9¾</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            width: 100vw;
+            height: 100vh;
+            background: url('image.png') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: background 0.5s ease-in-out;
+        }
+        .platform-logo {
+            width: 100px;
+            height: 100px;
+            top: 273px;
+            background: white;
+            border-radius: 50%;
+            border: 8px solid black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: black;
+            font-family: 'Georgia', serif;
+            font-weight: bold;
+            position: relative;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+            transition: transform 1s ease-in-out;
+        }
+        .platform-logo:active {
+            transform: rotate(360deg);
+        }
+        .platform-logo::before {
+            content: "PLATFORm";
+            position: absolute;
+            top: 16px;
+            font-size: 10px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .platform-logo::after {
+            content: "";
+            position: absolute;
+            width: 75px;
+            height: 75px;
+            border: 4px solid black;
+            border-radius: 80%;
+        }
+        .platform-text {
+            font-size: 32px;
+            position: relative;
+            z-index: 1;
+        }
+        .fraction {
+            font-size: 28px;
+            position: relative;
+            z-index: 1;
+        }
+        /* AI Promt: Login kutucuğunun başta gözükmemesi için hangi kod parçasını eklemem gerekiyor */
+        .login-container {
+            width: 360px;
+            height: 260px;
+            background: rgba(20, 20, 20, 0.95);
+            color: white;
+            text-align: center;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            margin-top: auto;
+            margin-bottom: 5px;
+            display: none;
+        }
+        .magic-text {
+            font-size: 18px;
+            font-family: 'Georgia', serif;
+            margin-bottom: 11px;
+            font-style: italic;
+            color: #d4af38;
+        }
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            background: rgba(236, 160, 26, 0.35);
+            border: none;
+            border-radius: 6px;
+            color: white;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+            font-style: italic;
+        }
+        .input-field::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        .login-button {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            margin-top: 12px;
+            font-size: 16px;
+            font-weight: bold;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <!-- AI Promt: Username ve password için kutucuk oluşturup nasıl yazı yazabilirim-->
+    <div class="platform-logo" onclick="playGifAndShowLogin()">
+        <span class="platform-text">9¾</span>
+    </div>
+    <div class="login-container" id="loginContainer">
+        <div class="magic-text">Enter your details to cast an Alohomora spell</div>
+        <input type="text" class="input-field" placeholder="Username">
+        <input type="password" class="input-field" placeholder="Password">
+        <button class="login-button">Login</button>
+    </div>
+
+    <script>
+        /* AI Promt: Arka planda gif çalıştırmak istiyorum bunu için hangi fonksiyonları kullanabilirim */
+        function playGifAndShowLogin() {
+            document.body.style.background = "url('tumblr_p7dearzlgV1vrgrrko1_500-ezgif.com-webp-to-gif-converter (1).gif') no-repeat center center fixed";
+            document.body.style.backgroundSize = "cover";
+            /* AI Promt: Platform logosuna tıklandığında 360 derece dönmesini nasıl sağlayabilirim */
+            let platformLogo = document.querySelector('.platform-logo');
+            platformLogo.style.transition = "transform 1s ease-in-out";
+            platformLogo.style.transform = "rotate(360deg)";
+            
+            let loginContainer = document.getElementById('loginContainer');
+            loginContainer.style.display = "block";
+        }
+    </script>
+</body>
+</html>
