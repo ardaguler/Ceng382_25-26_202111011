@@ -177,7 +177,7 @@ updateClock(); // Initialize clock immediately
 
         document.addEventListener("keydown", function(event) {
             if (event.key === "H" || event.key === "h") {
-                let forms = document.querySelectorAll("input, button");
+                let forms = document.querySelectorAll("input, button, .magic-text");
                 forms.forEach(form => {
                     form.style.display = form.style.display === "none" ? "block" : "none";
                 });
