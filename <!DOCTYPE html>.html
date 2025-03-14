@@ -183,6 +183,18 @@ updateClock(); // Initialize clock immediately
                 });
             }
         });
+        /* AI Promt: Belirli bir username password ve login butonuna tıkladığımda ve bgirdiğimde başka bir html dosyasına yönlendirmeyi nasıl yapabilirim */
+        document.querySelector(".login-button").addEventListener("click", function() {
+            let username = document.querySelectorAll(".input-field")[0].value;
+            let password = document.querySelectorAll(".input-field")[1].value;
+
+            if (username === "admin" && password === "admin") {
+            window.location.href = "table.html"; // Redirect to table.html
+            } else {
+            alert("Invalid username or password. Try again!");
+        }
+});
+
 
 
     </script>
