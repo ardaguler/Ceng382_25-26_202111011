@@ -1,0 +1,115 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home";
+}
+
+<!-- Masthead-->
+<header class="masthead bg-primary text-white text-center" id="page-top">
+    <div class="container d-flex align-items-center flex-column">
+        <img class="masthead-avatar mb-5" src="~/images/avataaars.svg" alt="Avatar" />
+        <h1 class="masthead-heading text-uppercase mb-0">Start Bootstrap</h1>
+        <div class="divider-custom divider-light">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+        <p class="masthead-subheading font-weight-light mb-0">Graphic Artist - Web Designer - Illustrator</p>
+    </div>
+</header>
+
+<!-- Portfolio Section-->
+<section class="page-section portfolio" id="portfolio">
+    <div class="container">
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Portfolio</h2>
+        <div class="divider-custom">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+
+        <div class="row justify-content-center">
+            <!-- Tek tek portfolio item’lar -->
+            @foreach (var item in new[] { "cabin", "cake", "circus", "game", "safe", "submarine" })
+            {
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white">
+                                <i class="fas fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img class="img-fluid" src="@Url.Content($"~/images/{item}.png")" alt="@item" />
+
+
+                    </div>
+                </div>
+
+            }
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="page-section bg-primary text-white mb-0" id="about">
+    <div class="container">
+        <h2 class="page-section-heading text-center text-uppercase text-white">About</h2>
+        <div class="divider-custom divider-light">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 ms-auto">
+                <p class="lead">Freelancer is a free bootstrap theme created by Start Bootstrap.</p>
+            </div>
+            <div class="col-lg-4 me-auto">
+                <p class="lead">You can customize this section as you wish with your own content!</p>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <a class="btn btn-xl btn-outline-light" href="https://startbootstrap.com/theme/freelancer/">
+                <i class="fas fa-download me-2"></i>
+                Free Download!
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="page-section" id="contact">
+    <div class="container">
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Contact Me</h2>
+        <div class="divider-custom">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-xl-7">
+                <form id="contactForm">
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="name" type="text" placeholder="Enter your name..." required />
+                        <label for="name">Full name</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="email" type="email" placeholder="name@example.com" required />
+                        <label for="email">Email address</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" required />
+                        <label for="phone">Phone number</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <textarea class="form-control" id="message" placeholder="Enter your message here..." style="height: 10rem" required></textarea>
+                        <label for="message">Message</label>
+                    </div>
+                    <div class="text-center">
+                        <button class="btn btn-primary btn-xl" type="submit">Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
