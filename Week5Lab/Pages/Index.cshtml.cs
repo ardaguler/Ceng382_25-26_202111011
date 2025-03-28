@@ -10,12 +10,13 @@ namespace Week5Lab.Pages
         private static int _nextId = 1;
 
         [BindProperty]
-        public ClassInformationModel ClassItem { get; set; }
+        public ClassInformationModel ClassItem { get; set; } = new();
 
         public List<ClassInformationModel> ClassList => _classList;
 
         public void OnGet()
         {
+            // Sayfa yüklendiğinde liste otomatik zaten geliyor
         }
 
         public IActionResult OnPostAdd()
@@ -25,6 +26,7 @@ namespace Week5Lab.Pages
                 return Page();
             }
 
+            // Edit mi yoksa yeni ekleme mi kontrolü
             var existing = _classList.FirstOrDefault(x => x.Id == ClassItem.Id);
             if (existing != null)
             {
@@ -38,7 +40,7 @@ namespace Week5Lab.Pages
                 _classList.Add(ClassItem);
             }
 
-            return RedirectToPage();
+            return RedirectToPage(); // Liste güncellensin
         }
 
         public IActionResult OnPostDelete(int id)
@@ -64,6 +66,7 @@ namespace Week5Lab.Pages
                     Description = item.Description
                 };
             }
+
             return Page();
         }
     }

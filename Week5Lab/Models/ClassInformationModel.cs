@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace Week5Lab.Models // ❗️Burada projenin adını tam olarak yazmalısın
+namespace Week5Lab.Models
 {
     public class ClassInformationModel
     {
