@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/arda/Desktop/test/Ceng382_25-26_202111011/LabProject/LabProject.csproj": {}
+    "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/LabProject/LabProject.csproj": {}
   },
   "projects": {
-    "/Users/arda/Desktop/test/Ceng382_25-26_202111011/LabProject/LabProject.csproj": {
+    "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/LabProject/LabProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/LabProject/LabProject.csproj",
+        "projectUniqueName": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/LabProject/LabProject.csproj",
         "projectName": "LabProject",
-        "projectPath": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/LabProject/LabProject.csproj",
+        "projectPath": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/LabProject/LabProject.csproj",
         "packagesPath": "/Users/arda/.nuget/packages/",
-        "outputPath": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/LabProject/obj/",
+        "outputPath": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/LabProject/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/arda/.nuget/NuGet/NuGet.Config"

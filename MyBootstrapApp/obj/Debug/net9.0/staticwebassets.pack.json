@@ -1,299 +1,299 @@
 {
   "Files": [
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/obj/Debug/net9.0/scopedcss/projectbundle/MyBootstrapApp.bundle.scp.css",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/obj/Debug/net9.0/scopedcss/projectbundle/MyBootstrapApp.bundle.scp.css",
       "PackagePath": "staticwebassets/MyBootstrapApp.epqjlkdprm.bundle.scp.css"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/assets/favicon.ico",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/assets/favicon.ico",
       "PackagePath": "staticwebassets/assets/favicon.ico"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/css/site.css",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/css/site.css",
       "PackagePath": "staticwebassets/css/site.css"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/css/styles.css",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/css/styles.css",
       "PackagePath": "staticwebassets/css/styles.css"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/favicon.ico",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/favicon.ico",
       "PackagePath": "staticwebassets/favicon.ico"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/images/avataaars.svg",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/images/avataaars.svg",
       "PackagePath": "staticwebassets/images/avataaars.svg"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/images/cabin.png",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/images/cabin.png",
       "PackagePath": "staticwebassets/images/cabin.png"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/images/cake.png",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/images/cake.png",
       "PackagePath": "staticwebassets/images/cake.png"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/images/circus.png",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/images/circus.png",
       "PackagePath": "staticwebassets/images/circus.png"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/images/game.png",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/images/game.png",
       "PackagePath": "staticwebassets/images/game.png"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/images/safe.png",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/images/safe.png",
       "PackagePath": "staticwebassets/images/safe.png"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/images/submarine.png",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/images/submarine.png",
       "PackagePath": "staticwebassets/images/submarine.png"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/js/scripts.js",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/js/scripts.js",
       "PackagePath": "staticwebassets/js/scripts.js"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/js/site.js",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/js/site.js",
       "PackagePath": "staticwebassets/js/site.js"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/lib/bootstrap/LICENSE",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/lib/bootstrap/LICENSE",
       "PackagePath": "staticwebassets/lib/bootstrap"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.css"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.css.map"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.min.css"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.min.css.map"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.css"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.css"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.css.map"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.min.css"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.css"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.css.map"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.min.css"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/lib/bootstrap/dist/css/bootstrap.css",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/lib/bootstrap/dist/css/bootstrap.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.css"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.css.map"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.min.css"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.min.css.map"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.css"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.css.map"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.min.css"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.js"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.js.map"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.js"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.js.map"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.min.js"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.min.js.map"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/lib/bootstrap/dist/js/bootstrap.js",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/lib/bootstrap/dist/js/bootstrap.js",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.js"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.js.map"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.min.js"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.min.js.map"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",
       "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/LICENSE.txt"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/lib/jquery-validation/LICENSE.md",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/lib/jquery-validation/LICENSE.md",
       "PackagePath": "staticwebassets/lib/jquery-validation/LICENSE.md"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/lib/jquery-validation/dist/additional-methods.js",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/lib/jquery-validation/dist/additional-methods.js",
       "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.js"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
       "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.min.js"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
       "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.js"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
       "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.min.js"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/lib/jquery/LICENSE.txt",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/lib/jquery/LICENSE.txt",
       "PackagePath": "staticwebassets/lib/jquery/LICENSE.txt"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/lib/jquery/dist/jquery.js",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/lib/jquery/dist/jquery.js",
       "PackagePath": "staticwebassets/lib/jquery/dist/jquery.js"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/lib/jquery/dist/jquery.min.js",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/lib/jquery/dist/jquery.min.js",
       "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.js"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/lib/jquery/dist/jquery.min.map",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/lib/jquery/dist/jquery.min.map",
       "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.map"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/lib/jquery/dist/jquery.slim.js",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/lib/jquery/dist/jquery.slim.js",
       "PackagePath": "staticwebassets/lib/jquery/dist/jquery.slim.js"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/lib/jquery/dist/jquery.slim.min.js",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/lib/jquery/dist/jquery.slim.min.js",
       "PackagePath": "staticwebassets/lib/jquery/dist/jquery.slim.min.js"
     },
     {
-      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/MyBootstrapApp/wwwroot/lib/jquery/dist/jquery.slim.min.map",
+      "Id": "/Users/arda/Downloads/Ceng382_25-26_202111011-week4/MyBootstrapApp/wwwroot/lib/jquery/dist/jquery.slim.min.map",
       "PackagePath": "staticwebassets/lib/jquery/dist/jquery.slim.min.map"
     },
     {
