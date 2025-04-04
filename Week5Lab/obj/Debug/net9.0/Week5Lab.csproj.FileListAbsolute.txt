@@ -18,7 +18,6 @@
 /Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/obj/Debug/net9.0/scopedcss/Pages/Shared/_Layout.cshtml.rz.scp.css
 /Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/obj/Debug/net9.0/scopedcss/bundle/Week5Lab.styles.css
 /Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/obj/Debug/net9.0/scopedcss/projectbundle/Week5Lab.bundle.scp.css
-/Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/obj/Debug/net9.0/compressed/o6wx5gpyc9-b9sayid5wm.gz
 /Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/obj/Debug/net9.0/compressed/f4n1pcj38r-61n19gt1b8.gz
 /Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/obj/Debug/net9.0/compressed/lxu4sgtnt5-xtxxf3hu2r.gz
 /Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/obj/Debug/net9.0/compressed/epplgxh6g2-bqjiyaj88i.gz
@@ -96,3 +95,6 @@
 /Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/obj/Debug/net9.0/Week5Lab.pdb
 /Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/obj/Debug/net9.0/Week5Lab.genruntimeconfig.cache
 /Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/obj/Debug/net9.0/ref/Week5Lab.dll
+/Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/obj/Debug/net9.0/compressed/8kpdnzyjus-ow0k05wx0r.gz
+/Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/obj/Debug/net9.0/compressed/554hzpisj6-ttjjo1b3rr.gz
+/Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/obj/Debug/net9.0/compressed/o6wx5gpyc9-xlungpt85l.gz

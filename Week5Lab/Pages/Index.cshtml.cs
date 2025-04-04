@@ -16,7 +16,8 @@ namespace Week5Lab.Pages
 
         public void OnGet()
         {
-            // Sayfa yüklendiğinde liste otomatik zaten geliyor
+            ClassItem = new ClassInformationModel();
+            IsEditing = false;
         }
 
         public IActionResult OnPostAdd()
@@ -26,22 +27,36 @@ namespace Week5Lab.Pages
                 return Page();
             }
 
-            // Edit mi yoksa yeni ekleme mi kontrolü
-            var existing = _classList.FirstOrDefault(x => x.Id == ClassItem.Id);
-            if (existing != null)
+            // Eğer düzenleme yapılacaksa (ID > 0)
+            if (ClassItem.Id > 0)
             {
-                existing.ClassName = ClassItem.ClassName;
-                existing.StudentCount = ClassItem.StudentCount;
-                existing.Description = ClassItem.Description;
+                var existing = _classList.FirstOrDefault(x => x.Id == ClassItem.Id);
+                if (existing != null)
+                {
+                    existing.ClassName = ClassItem.ClassName;
+                    existing.StudentCount = ClassItem.StudentCount;
+                    existing.Description = ClassItem.Description;
+                }
             }
             else
             {
-                ClassItem.Id = _nextId++;
+                // ✅ En küçük boş ID'yi bul
+                var usedIds = _classList.Select(x => x.Id).OrderBy(id => id).ToList();
+                int nextId = 1;
+                foreach (var id in usedIds)
+                {
+                    if (id != nextId) break;
+                    nextId++;
+                }
+
+                ClassItem.Id = nextId;
                 _classList.Add(ClassItem);
             }
 
-            return RedirectToPage(); // Liste güncellensin
+            return RedirectToPage();
         }
+
+
 
         public IActionResult OnPostDelete(int id)
         {
@@ -49,9 +64,19 @@ namespace Week5Lab.Pages
             if (item != null)
             {
                 _classList.Remove(item);
+
+                // ✅ SİLİNDİKTEN SONRA TÜM ID'LERİ BAŞTAN NUMARALANDIR
+                int counter = 1;
+                foreach (var c in _classList.OrderBy(x => x.Id))
+                {
+                    c.Id = counter++;
+                }
             }
+
             return RedirectToPage();
         }
+
+        public bool IsEditing { get; set; } = false;
 
         public IActionResult OnPostEdit(int id)
         {
@@ -65,9 +90,12 @@ namespace Week5Lab.Pages
                     StudentCount = item.StudentCount,
                     Description = item.Description
                 };
+
+                IsEditing = true; // ✅ Edit moduna gir
             }
 
             return Page();
         }
+
     }
 }
