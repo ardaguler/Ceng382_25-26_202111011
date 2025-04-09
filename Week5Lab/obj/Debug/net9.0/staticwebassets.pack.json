@@ -13,6 +13,18 @@
       "PackagePath": "staticwebassets/favicon.ico"
     },
     {
+      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/wwwroot/images/bg.png",
+      "PackagePath": "staticwebassets/images/bg.png"
+    },
+    {
+      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/wwwroot/images/icons8-delete.svg",
+      "PackagePath": "staticwebassets/images/icons8-delete.svg"
+    },
+    {
+      "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/wwwroot/images/icons8-edit.svg",
+      "PackagePath": "staticwebassets/images/icons8-edit.svg"
+    },
+    {
       "Id": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/wwwroot/js/site.js",
       "PackagePath": "staticwebassets/js/site.js"
     },

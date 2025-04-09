@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "vlgOqGocTUCG5KVmaZSnYA35TWLM2KY+jzAjjN8fhTQ=",
+  "Hash": "+ckzdeUo/UchCMePSIs2LoF8K5HviQ4fjE3GUaYxz20=",
   "Source": "Week5Lab",
   "BasePath": "_content/Week5Lab",
   "Mode": "Default",
@@ -206,6 +206,27 @@
       "OriginalItemSpec": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map"
     },
     {
+      "Identity": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/obj/Debug/net9.0/compressed/554hzpisj6-ttjjo1b3rr.gz",
+      "SourceId": "Week5Lab",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/obj/Debug/net9.0/compressed/",
+      "BasePath": "_content/Week5Lab",
+      "RelativePath": "images/icons8-edit#[.{fingerprint=ttjjo1b3rr}]?.svg.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/wwwroot/images/icons8-edit.svg",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "pt1lmwhikl",
+      "Integrity": "gx0Q6DEhpzb5GL62PRNQtIV5FlGZb0h5YN0Q3ZC47xs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/wwwroot/images/icons8-edit.svg"
+    },
+    {
       "Identity": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/obj/Debug/net9.0/compressed/5q3hpdxih7-s35ty4nyc5.gz",
       "SourceId": "Week5Lab",
       "SourceType": "Discovered",
@@ -267,6 +288,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map"
+    },
+    {
+      "Identity": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/obj/Debug/net9.0/compressed/8kpdnzyjus-ow0k05wx0r.gz",
+      "SourceId": "Week5Lab",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/obj/Debug/net9.0/compressed/",
+      "BasePath": "_content/Week5Lab",
+      "RelativePath": "images/icons8-delete#[.{fingerprint=ow0k05wx0r}]?.svg.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/wwwroot/images/icons8-delete.svg",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "k236on990h",
+      "Integrity": "9AaUdjOjQ7mIJVSa3Lh3rbXlin/UAC+JzkArZt07BLM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/wwwroot/images/icons8-delete.svg"
     },
     {
       "Identity": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/obj/Debug/net9.0/compressed/9327popoic-c2jlpeoesf.gz",
@@ -857,12 +899,12 @@
       "OriginalItemSpec": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/obj/Debug/net9.0/scopedcss/bundle/Week5Lab.styles.css"
     },
     {
-      "Identity": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/obj/Debug/net9.0/compressed/o6wx5gpyc9-b9sayid5wm.gz",
+      "Identity": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/obj/Debug/net9.0/compressed/o6wx5gpyc9-xlungpt85l.gz",
       "SourceId": "Week5Lab",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/obj/Debug/net9.0/compressed/",
       "BasePath": "_content/Week5Lab",
-      "RelativePath": "css/site#[.{fingerprint=b9sayid5wm}]?.css.gz",
+      "RelativePath": "css/site#[.{fingerprint=xlungpt85l}]?.css.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -871,8 +913,8 @@
       "RelatedAsset": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/wwwroot/css/site.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "pw5l7j5n1s",
-      "Integrity": "KbRAtTdCZlkPQMEP8615MCQRMWQsaAwQYpxvPAoetmA=",
+      "Fingerprint": "e0ldzffqaj",
+      "Integrity": "YkVrFSMpFveRTfITXdMDC93Z1ydGc/1ghTN3lPbDjng=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/wwwroot/css/site.css"
@@ -1417,8 +1459,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "b9sayid5wm",
-      "Integrity": "j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg=",
+      "Fingerprint": "xlungpt85l",
+      "Integrity": "SyFLFhduuEX0z/ATyy3JVfQTB7/OheFgip2ypGZMglg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/css/site.css"
@@ -1443,6 +1485,69 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/favicon.ico"
+    },
+    {
+      "Identity": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/wwwroot/images/bg.png",
+      "SourceId": "Week5Lab",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/wwwroot/",
+      "BasePath": "_content/Week5Lab",
+      "RelativePath": "images/bg#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "2t9flvbr8q",
+      "Integrity": "ZmB1wD3yCtAJ4+VwgnMFy+o1eFkhytqY0TMBDZQlZJM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/bg.png"
+    },
+    {
+      "Identity": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/wwwroot/images/icons8-delete.svg",
+      "SourceId": "Week5Lab",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/wwwroot/",
+      "BasePath": "_content/Week5Lab",
+      "RelativePath": "images/icons8-delete#[.{fingerprint}]?.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ow0k05wx0r",
+      "Integrity": "aEpoR9YLaAzMiolCzLH6xuJPjgJWdmHVbbXh+q/Bzpo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/icons8-delete.svg"
+    },
+    {
+      "Identity": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/wwwroot/images/icons8-edit.svg",
+      "SourceId": "Week5Lab",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/wwwroot/",
+      "BasePath": "_content/Week5Lab",
+      "RelativePath": "images/icons8-edit#[.{fingerprint}]?.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ttjjo1b3rr",
+      "Integrity": "3+hoam747uGL6nBorTz/p0PilBGOHkpmZWaXEMj4Acc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/icons8-edit.svg"
     },
     {
       "Identity": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/wwwroot/js/site.js",
@@ -2728,13 +2833,13 @@
   ],
   "Endpoints": [
     {
-      "Route": "css/site.b9sayid5wm.css",
-      "AssetFile": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/obj/Debug/net9.0/compressed/o6wx5gpyc9-b9sayid5wm.gz",
+      "Route": "css/site.css",
+      "AssetFile": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/obj/Debug/net9.0/compressed/o6wx5gpyc9-xlungpt85l.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.003134796238"
+          "Quality": "0.002207505519"
         }
       ],
       "ResponseHeaders": [
@@ -2744,19 +2849,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "318"
+          "Value": "452"
         },
         {
           "Name": "ETag",
-          "Value": "\"KbRAtTdCZlkPQMEP8615MCQRMWQsaAwQYpxvPAoetmA=\""
+          "Value": "\"YkVrFSMpFveRTfITXdMDC93Z1ydGc/1ghTN3lPbDjng=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 08 Apr 2025 23:09:55 GMT"
+          "Value": "Tue, 08 Apr 2025 23:13:04 GMT"
         },
         {
           "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
+          "Value": "no-cache"
         },
         {
           "Name": "Content-Encoding",
@@ -2772,26 +2877,18 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg=\""
+          "Value": "W/\"SyFLFhduuEX0z/ATyy3JVfQTB7/OheFgip2ypGZMglg=\""
         }
       ],
       "EndpointProperties": [
         {
-          "Name": "fingerprint",
-          "Value": "b9sayid5wm"
-        },
-        {
-          "Name": "label",
-          "Value": "css/site.css"
-        },
-        {
           "Name": "integrity",
-          "Value": "sha256-j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg="
+          "Value": "sha256-SyFLFhduuEX0z/ATyy3JVfQTB7/OheFgip2ypGZMglg="
         }
       ]
     },
     {
-      "Route": "css/site.b9sayid5wm.css",
+      "Route": "css/site.css",
       "AssetFile": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/wwwroot/css/site.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -2801,7 +2898,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "667"
+          "Value": "978"
         },
         {
           "Name": "Content-Type",
@@ -2809,11 +2906,156 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg=\""
+          "Value": "\"SyFLFhduuEX0z/ATyy3JVfQTB7/OheFgip2ypGZMglg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 08 Apr 2025 23:09:55 GMT"
+          "Value": "Tue, 08 Apr 2025 23:13:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-SyFLFhduuEX0z/ATyy3JVfQTB7/OheFgip2ypGZMglg="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.css.gz",
+      "AssetFile": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/obj/Debug/net9.0/compressed/o6wx5gpyc9-xlungpt85l.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "452"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"YkVrFSMpFveRTfITXdMDC93Z1ydGc/1ghTN3lPbDjng=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 08 Apr 2025 23:13:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-YkVrFSMpFveRTfITXdMDC93Z1ydGc/1ghTN3lPbDjng="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.xlungpt85l.css",
+      "AssetFile": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/obj/Debug/net9.0/compressed/o6wx5gpyc9-xlungpt85l.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.002207505519"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "452"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"YkVrFSMpFveRTfITXdMDC93Z1ydGc/1ghTN3lPbDjng=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 08 Apr 2025 23:13:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"SyFLFhduuEX0z/ATyy3JVfQTB7/OheFgip2ypGZMglg=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xlungpt85l"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-SyFLFhduuEX0z/ATyy3JVfQTB7/OheFgip2ypGZMglg="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.xlungpt85l.css",
+      "AssetFile": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/wwwroot/css/site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "978"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"SyFLFhduuEX0z/ATyy3JVfQTB7/OheFgip2ypGZMglg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 08 Apr 2025 23:13:04 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2823,7 +3065,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "b9sayid5wm"
+          "Value": "xlungpt85l"
         },
         {
           "Name": "label",
@@ -2831,13 +3073,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg="
+          "Value": "sha256-SyFLFhduuEX0z/ATyy3JVfQTB7/OheFgip2ypGZMglg="
         }
       ]
     },
     {
-      "Route": "css/site.b9sayid5wm.css.gz",
-      "AssetFile": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/obj/Debug/net9.0/compressed/o6wx5gpyc9-b9sayid5wm.gz",
+      "Route": "css/site.xlungpt85l.css.gz",
+      "AssetFile": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/obj/Debug/net9.0/compressed/o6wx5gpyc9-xlungpt85l.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2846,7 +3088,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "318"
+          "Value": "452"
         },
         {
           "Name": "Content-Type",
@@ -2854,11 +3096,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"KbRAtTdCZlkPQMEP8615MCQRMWQsaAwQYpxvPAoetmA=\""
+          "Value": "\"YkVrFSMpFveRTfITXdMDC93Z1ydGc/1ghTN3lPbDjng=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 08 Apr 2025 23:09:55 GMT"
+          "Value": "Tue, 08 Apr 2025 23:13:04 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2876,7 +3118,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "b9sayid5wm"
+          "Value": "xlungpt85l"
         },
         {
           "Name": "label",
@@ -2884,144 +3126,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-KbRAtTdCZlkPQMEP8615MCQRMWQsaAwQYpxvPAoetmA="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.css",
-      "AssetFile": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/obj/Debug/net9.0/compressed/o6wx5gpyc9-b9sayid5wm.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.003134796238"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "318"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"KbRAtTdCZlkPQMEP8615MCQRMWQsaAwQYpxvPAoetmA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 08 Apr 2025 23:09:55 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.css",
-      "AssetFile": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/wwwroot/css/site.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "667"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 08 Apr 2025 23:09:55 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.css.gz",
-      "AssetFile": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/obj/Debug/net9.0/compressed/o6wx5gpyc9-b9sayid5wm.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "318"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"KbRAtTdCZlkPQMEP8615MCQRMWQsaAwQYpxvPAoetmA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 08 Apr 2025 23:09:55 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-KbRAtTdCZlkPQMEP8615MCQRMWQsaAwQYpxvPAoetmA="
+          "Value": "sha256-YkVrFSMpFveRTfITXdMDC93Z1ydGc/1ghTN3lPbDjng="
         }
       ]
     },
@@ -3320,6 +3425,684 @@
         {
           "Name": "integrity",
           "Value": "sha256-+/824NtfTA0L7Mr42Fo+86YJP4R5cigdi9S7Fx5VVl4="
+        }
+      ]
+    },
+    {
+      "Route": "images/bg.2t9flvbr8q.png",
+      "AssetFile": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/wwwroot/images/bg.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "913773"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZmB1wD3yCtAJ4+VwgnMFy+o1eFkhytqY0TMBDZQlZJM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 08 Apr 2025 23:13:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2t9flvbr8q"
+        },
+        {
+          "Name": "label",
+          "Value": "images/bg.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZmB1wD3yCtAJ4+VwgnMFy+o1eFkhytqY0TMBDZQlZJM="
+        }
+      ]
+    },
+    {
+      "Route": "images/bg.png",
+      "AssetFile": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/wwwroot/images/bg.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "913773"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZmB1wD3yCtAJ4+VwgnMFy+o1eFkhytqY0TMBDZQlZJM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 08 Apr 2025 23:13:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZmB1wD3yCtAJ4+VwgnMFy+o1eFkhytqY0TMBDZQlZJM="
+        }
+      ]
+    },
+    {
+      "Route": "images/icons8-delete.ow0k05wx0r.svg",
+      "AssetFile": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/obj/Debug/net9.0/compressed/8kpdnzyjus-ow0k05wx0r.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001283697047"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "778"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9AaUdjOjQ7mIJVSa3Lh3rbXlin/UAC+JzkArZt07BLM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 08 Apr 2025 23:13:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"aEpoR9YLaAzMiolCzLH6xuJPjgJWdmHVbbXh+q/Bzpo=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ow0k05wx0r"
+        },
+        {
+          "Name": "label",
+          "Value": "images/icons8-delete.svg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-aEpoR9YLaAzMiolCzLH6xuJPjgJWdmHVbbXh+q/Bzpo="
+        }
+      ]
+    },
+    {
+      "Route": "images/icons8-delete.ow0k05wx0r.svg",
+      "AssetFile": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/wwwroot/images/icons8-delete.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2085"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"aEpoR9YLaAzMiolCzLH6xuJPjgJWdmHVbbXh+q/Bzpo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 08 Apr 2025 23:13:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ow0k05wx0r"
+        },
+        {
+          "Name": "label",
+          "Value": "images/icons8-delete.svg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-aEpoR9YLaAzMiolCzLH6xuJPjgJWdmHVbbXh+q/Bzpo="
+        }
+      ]
+    },
+    {
+      "Route": "images/icons8-delete.ow0k05wx0r.svg.gz",
+      "AssetFile": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/obj/Debug/net9.0/compressed/8kpdnzyjus-ow0k05wx0r.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "778"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9AaUdjOjQ7mIJVSa3Lh3rbXlin/UAC+JzkArZt07BLM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 08 Apr 2025 23:13:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ow0k05wx0r"
+        },
+        {
+          "Name": "label",
+          "Value": "images/icons8-delete.svg.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-9AaUdjOjQ7mIJVSa3Lh3rbXlin/UAC+JzkArZt07BLM="
+        }
+      ]
+    },
+    {
+      "Route": "images/icons8-delete.svg",
+      "AssetFile": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/obj/Debug/net9.0/compressed/8kpdnzyjus-ow0k05wx0r.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001283697047"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "778"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9AaUdjOjQ7mIJVSa3Lh3rbXlin/UAC+JzkArZt07BLM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 08 Apr 2025 23:13:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"aEpoR9YLaAzMiolCzLH6xuJPjgJWdmHVbbXh+q/Bzpo=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-aEpoR9YLaAzMiolCzLH6xuJPjgJWdmHVbbXh+q/Bzpo="
+        }
+      ]
+    },
+    {
+      "Route": "images/icons8-delete.svg",
+      "AssetFile": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/wwwroot/images/icons8-delete.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2085"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"aEpoR9YLaAzMiolCzLH6xuJPjgJWdmHVbbXh+q/Bzpo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 08 Apr 2025 23:13:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-aEpoR9YLaAzMiolCzLH6xuJPjgJWdmHVbbXh+q/Bzpo="
+        }
+      ]
+    },
+    {
+      "Route": "images/icons8-delete.svg.gz",
+      "AssetFile": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/obj/Debug/net9.0/compressed/8kpdnzyjus-ow0k05wx0r.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "778"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9AaUdjOjQ7mIJVSa3Lh3rbXlin/UAC+JzkArZt07BLM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 08 Apr 2025 23:13:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-9AaUdjOjQ7mIJVSa3Lh3rbXlin/UAC+JzkArZt07BLM="
+        }
+      ]
+    },
+    {
+      "Route": "images/icons8-edit.svg",
+      "AssetFile": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/obj/Debug/net9.0/compressed/554hzpisj6-ttjjo1b3rr.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000863557858"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1157"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gx0Q6DEhpzb5GL62PRNQtIV5FlGZb0h5YN0Q3ZC47xs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 08 Apr 2025 23:13:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"3+hoam747uGL6nBorTz/p0PilBGOHkpmZWaXEMj4Acc=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-3+hoam747uGL6nBorTz/p0PilBGOHkpmZWaXEMj4Acc="
+        }
+      ]
+    },
+    {
+      "Route": "images/icons8-edit.svg",
+      "AssetFile": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/wwwroot/images/icons8-edit.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2990"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"3+hoam747uGL6nBorTz/p0PilBGOHkpmZWaXEMj4Acc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 08 Apr 2025 23:13:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-3+hoam747uGL6nBorTz/p0PilBGOHkpmZWaXEMj4Acc="
+        }
+      ]
+    },
+    {
+      "Route": "images/icons8-edit.svg.gz",
+      "AssetFile": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/obj/Debug/net9.0/compressed/554hzpisj6-ttjjo1b3rr.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1157"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gx0Q6DEhpzb5GL62PRNQtIV5FlGZb0h5YN0Q3ZC47xs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 08 Apr 2025 23:13:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-gx0Q6DEhpzb5GL62PRNQtIV5FlGZb0h5YN0Q3ZC47xs="
+        }
+      ]
+    },
+    {
+      "Route": "images/icons8-edit.ttjjo1b3rr.svg",
+      "AssetFile": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/obj/Debug/net9.0/compressed/554hzpisj6-ttjjo1b3rr.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000863557858"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1157"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gx0Q6DEhpzb5GL62PRNQtIV5FlGZb0h5YN0Q3ZC47xs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 08 Apr 2025 23:13:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"3+hoam747uGL6nBorTz/p0PilBGOHkpmZWaXEMj4Acc=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ttjjo1b3rr"
+        },
+        {
+          "Name": "label",
+          "Value": "images/icons8-edit.svg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-3+hoam747uGL6nBorTz/p0PilBGOHkpmZWaXEMj4Acc="
+        }
+      ]
+    },
+    {
+      "Route": "images/icons8-edit.ttjjo1b3rr.svg",
+      "AssetFile": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/wwwroot/images/icons8-edit.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2990"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"3+hoam747uGL6nBorTz/p0PilBGOHkpmZWaXEMj4Acc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 08 Apr 2025 23:13:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ttjjo1b3rr"
+        },
+        {
+          "Name": "label",
+          "Value": "images/icons8-edit.svg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-3+hoam747uGL6nBorTz/p0PilBGOHkpmZWaXEMj4Acc="
+        }
+      ]
+    },
+    {
+      "Route": "images/icons8-edit.ttjjo1b3rr.svg.gz",
+      "AssetFile": "/Users/arda/Desktop/test/Ceng382_25-26_202111011/Week5Lab/obj/Debug/net9.0/compressed/554hzpisj6-ttjjo1b3rr.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1157"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gx0Q6DEhpzb5GL62PRNQtIV5FlGZb0h5YN0Q3ZC47xs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 08 Apr 2025 23:13:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ttjjo1b3rr"
+        },
+        {
+          "Name": "label",
+          "Value": "images/icons8-edit.svg.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-gx0Q6DEhpzb5GL62PRNQtIV5FlGZb0h5YN0Q3ZC47xs="
         }
       ]
     },
