@@ -1,10 +1,14 @@
 // Pages/Index.cshtml.cs
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Week5Lab.Models; // Make sure this is included
+using Week5Lab.Models;      // Your model classes
+using Week5Lab.Utilities;   // For the Utils class
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;          // For Encoding
+using System.Text.Json;     // For JsonSerializerOptions (optional here)
+
 
 namespace Week5Lab.Pages
 {
@@ -15,11 +19,13 @@ namespace Week5Lab.Pages
         private static bool _dataInitialized = false;
         private static readonly object _lock = new object();
 
+        // Static constructor
         static IndexModel()
         {
             InitializeData();
         }
 
+        // InitializeData method
         private static void InitializeData()
         {
              lock (_lock)
@@ -33,10 +39,9 @@ namespace Week5Lab.Pages
                      _allClassList.Add(new ClassInformationModel
                      {
                          Id = i,
-                         ClassName = $"Class {Convert.ToChar(65 + random.Next(0, 26))}{i}",
+                         ClassName = $"Class {Convert.ToChar(65 + random.Next(0, 26))}{i}", // Assuming ClassName init handles warning
                          StudentCount = random.Next(10, 51),
-                         Description = $"Description for class {i}. Some details here."
-                         // Add other properties if ClassInformationModel has them
+                         Description = $"Description for class {i}. Some details here." // Assuming Description init handles warning
                      });
                  }
                  _dataInitialized = true;
@@ -55,73 +60,72 @@ namespace Week5Lab.Pages
 
         // --- Properties for Pagination ---
         [BindProperty(SupportsGet = true)]
-        public int CurrentPage { get; set; } = 1;
+        public int CurrentPage { get; set; } = 1; // This holds the current page for display
 
-        public int PageSize { get; set; } = 10;
+        public int PageSize { get; set; } = 10; // Page size used for display and export
         public int TotalPages { get; set; }
         public int TotalCount { get; set; }
 
         // --- Properties for the Form and Display ---
         [BindProperty]
-        public ClassInformationModel ClassItem { get; set; } = new(); // Form uses the original model
+        public ClassInformationModel ClassItem { get; set; } = new();
 
-        // ***MODIFIED***: Use ClassInformationTable for the display list
         public List<ClassInformationTable> DisplayedClassList { get; set; } = new();
-
         public bool IsEditing { get; set; } = false;
 
-        // --- OnGet: Filtering and Pagination Logic ---
-        public void OnGet()
+        // --- Helper: Refactored Filtering Logic ---
+        private IQueryable<ClassInformationModel> GetFilteredQuery(string? searchClassName, int? minStudentCount, int? maxStudentCount)
         {
             InitializeData();
-
             IQueryable<ClassInformationModel> query = _allClassList.AsQueryable();
 
-            // Apply Filtering
-            if (!string.IsNullOrWhiteSpace(SearchClassName))
+            if (!string.IsNullOrWhiteSpace(searchClassName))
             {
-                query = query.Where(c => c.ClassName.Contains(SearchClassName, StringComparison.OrdinalIgnoreCase));
+                query = query.Where(c => c.ClassName.Contains(searchClassName, StringComparison.OrdinalIgnoreCase));
             }
-            if (MinStudentCount.HasValue)
+            if (minStudentCount.HasValue)
             {
-                query = query.Where(c => c.StudentCount >= MinStudentCount.Value);
+                query = query.Where(c => c.StudentCount >= minStudentCount.Value);
             }
-            if (MaxStudentCount.HasValue)
+            if (maxStudentCount.HasValue)
             {
-                query = query.Where(c => c.StudentCount <= MaxStudentCount.Value);
+                query = query.Where(c => c.StudentCount <= maxStudentCount.Value);
             }
+            return query;
+        }
+
+
+        // --- OnGet: Populates the page ---
+        public void OnGet()
+        {
+            var query = GetFilteredQuery(SearchClassName, MinStudentCount, MaxStudentCount);
 
             TotalCount = query.Count();
             TotalPages = (int)Math.Ceiling(TotalCount / (double)PageSize);
+            // Use the CurrentPage property bound from the request or default
             CurrentPage = Math.Max(1, Math.Min(CurrentPage, TotalPages == 0 ? 1 : TotalPages));
 
-
-            // Apply Pagination and ***MODIFIED*** Project to ClassInformationTable
             DisplayedClassList = query
-                .OrderBy(c => c.Id)
-                .Skip((CurrentPage - 1) * PageSize)
+                .OrderBy(c => c.Id) // Assuming default order by ID
+                .Skip((CurrentPage - 1) * PageSize) // Apply pagination for display
                 .Take(PageSize)
-                .Select(c => new ClassInformationTable // Project to the new model
+                .Select(c => new ClassInformationTable
                 {
                     Id = c.Id,
                     ClassName = c.ClassName,
                     StudentCount = c.StudentCount,
                     Description = c.Description
-                    // Map only the properties needed for the table/actions
                 })
-                .ToList(); // Execute the query
+                .ToList();
 
             if (!IsEditing)
             {
                ClassItem = new ClassInformationModel();
             }
-             // OnGet logic continues as before...
         }
 
-        // --- OnPost Methods (Add, Delete, Edit) ---
-        // These still operate on the _allClassList which contains ClassInformationModel objects
-        // The mapping only happens when preparing data for display in OnGet.
-
+        // --- OnPost Methods (Add, Delete, Edit remain unchanged) ---
+         // ... (OnPostAdd, OnPostDelete, FilterMatches, OnPostEdit code remains exactly the same as before) ...
          public IActionResult OnPostAdd()
          {
              ModelState.Remove("SearchClassName");
@@ -130,7 +134,7 @@ namespace Week5Lab.Pages
 
              if (!ModelState.IsValid)
              {
-                  OnGet(); // Repopulate DisplayedClassList (which uses ClassInformationTable)
+                  OnGet();
                   return Page();
              }
 
@@ -146,7 +150,6 @@ namespace Week5Lab.Pages
              else // Add
              {
                  int nextId = (_allClassList.Any() ? _allClassList.Max(x => x.Id) : 0) + 1;
-                 // Create a new ClassInformationModel for the backend list
                  var newItem = new ClassInformationModel
                  {
                      Id = nextId,
@@ -157,7 +160,6 @@ namespace Week5Lab.Pages
                  _allClassList.Add(newItem);
              }
 
-             // Redirect to GET, preserving filters/page
              return RedirectToPage(new { currentPage = CurrentPage, SearchClassName=SearchClassName, MinStudentCount=MinStudentCount, MaxStudentCount=MaxStudentCount });
          }
 
@@ -169,14 +171,14 @@ namespace Week5Lab.Pages
                  _allClassList.Remove(item);
              }
 
-             int potentialLastPage = (int)Math.Ceiling((_allClassList.Count(c => FilterMatches(c))) / (double)PageSize);
-             int pageToRedirect = Math.Min(CurrentPage, Math.Max(1, potentialLastPage));
+             int totalMatchingAfterDelete = GetFilteredQuery(SearchClassName, MinStudentCount, MaxStudentCount).Count();
+             int potentialLastPage = (int)Math.Ceiling(totalMatchingAfterDelete / (double)PageSize);
+             int pageToRedirect = Math.Min(CurrentPage, Math.Max(1, potentialLastPage == 0 ? 1 : potentialLastPage));
 
              return RedirectToPage(new { currentPage = pageToRedirect, SearchClassName=SearchClassName, MinStudentCount=MinStudentCount, MaxStudentCount=MaxStudentCount });
          }
 
-          // Helper function for filter check used in Delete redirection logic
-          private bool FilterMatches(ClassInformationModel c) // Still operates on ClassInformationModel
+          private bool FilterMatches(ClassInformationModel c)
           {
               bool match = true;
               if (!string.IsNullOrWhiteSpace(SearchClassName))
@@ -194,33 +196,116 @@ namespace Week5Lab.Pages
               return match;
           }
 
-
          public IActionResult OnPostEdit(int id)
          {
-             // Find the item in the main list (_allClassList)
              var item = _allClassList.FirstOrDefault(x => x.Id == id);
              if (item != null)
              {
-                  // Populate ClassItem (which is ClassInformationModel) for the form
                  ClassItem = new ClassInformationModel
                  {
                      Id = item.Id,
                      ClassName = item.ClassName,
                      StudentCount = item.StudentCount,
                      Description = item.Description
-                     // Map other properties if they exist and are needed for editing
                  };
                  IsEditing = true;
              }
              else
              {
                  IsEditing = false;
-                 // Handle item not found? Maybe TempData message?
+             }
+             OnGet();
+             return Page();
+         }
+
+
+         // --- *** UPDATED ***: Handler for JSON Export (Supports 'all', 'filtered', 'currentPage') ---
+         public IActionResult OnGetExportJson(
+             [FromQuery] string exportMode, // "all", "filtered", or "currentPage"
+             [FromQuery] string[]? selectedColumns,
+             // Filter parameters (always passed, used by 'filtered' and 'currentPage')
+             [FromQuery] string? searchClassName,
+             [FromQuery] int? minStudentCount,
+             [FromQuery] int? maxStudentCount,
+             // Pagination parameter (only used by 'currentPage')
+             [FromQuery] int? currentPage // Renamed parameter from previous thought process to match JS param
+            )
+         {
+             IEnumerable<ClassInformationModel> dataToExport;
+             string effectiveMode = exportMode?.ToLowerInvariant() ?? "all"; // Default to 'all' if mode is missing
+
+             // Determine the data set based on the export mode
+             switch (effectiveMode)
+             {
+                 case "currentpage":
+                     // 1. Filter
+                     var queryPage = GetFilteredQuery(searchClassName, minStudentCount, maxStudentCount);
+                     // 2. Determine page number (use parameter, default to 1)
+                     int pageNum = Math.Max(1, currentPage.GetValueOrDefault(1));
+                     // 3. Apply ordering and pagination
+                     dataToExport = queryPage
+                                        .OrderBy(c => c.Id) // Match display order if needed
+                                        .Skip((pageNum - 1) * PageSize)
+                                        .Take(PageSize)
+                                        .ToList();
+                     break;
+
+                 case "filtered":
+                     // 1. Filter only (no pagination)
+                     dataToExport = GetFilteredQuery(searchClassName, minStudentCount, maxStudentCount)
+                                        .OrderBy(c => c.Id) // Optional: Order all filtered results
+                                        .ToList();
+                     break;
+
+                 case "all":
+                 default: // Default to exporting all data
+                     InitializeData();
+                     dataToExport = _allClassList
+                                        .OrderBy(c => c.Id) // Optional: Order all results
+                                        .ToList(); // Get a copy of the full list
+                     break;
              }
 
-             OnGet(); // Repopulates DisplayedClassList using ClassInformationTable
 
-             return Page();
+             // --- Column Selection Logic (Remains the same) ---
+             string jsonString;
+             if (selectedColumns != null && selectedColumns.Length > 0)
+             {
+                 var projectedData = dataToExport.Select(item =>
+                 {
+                     var dict = new Dictionary<string, object>();
+                     foreach (var colName in selectedColumns)
+                     {
+                         switch (colName.Trim().ToLowerInvariant()) // Use ToLowerInvariant
+                         {
+                             case "id": dict[colName] = item.Id; break;
+                             case "classname": dict[colName] = item.ClassName; break;
+                             case "studentcount": dict[colName] = item.StudentCount; break;
+                             case "description": dict[colName] = item.Description ?? string.Empty; break;
+                         }
+                     }
+                     return dict;
+                 }).ToList();
+                 // Serialize projected data (Dictionary)
+                 jsonString = Utils.Instance.ConvertToJsonString<Dictionary<string, object>>(projectedData, prettyPrint: true);
+             }
+             else
+             {
+                 // Serialize original data (ClassInformationModel)
+                 jsonString = Utils.Instance.ConvertToJsonString<ClassInformationModel>(dataToExport, prettyPrint: true);
+             }
+
+             // --- Error Check & File Return (Remains the same) ---
+             if (jsonString.Contains("error\":\"Failed to serialize data"))
+             {
+                 Console.Error.WriteLine($"Export failed: Serialization error detected by Utils class for mode '{exportMode}'.");
+                 TempData["ExportError"] = "Could not generate the JSON file due to an internal error.";
+                 // Redirect back using current page from property if available, else use parameter
+                 return RedirectToPage(new { currentPage = this.CurrentPage, SearchClassName = searchClassName, MinStudentCount = minStudentCount, MaxStudentCount = maxStudentCount });
+             }
+
+             var fileName = $"class_export_{effectiveMode}_{DateTime.Now:yyyyMMdd_HHmmss}.json";
+             return File(Encoding.UTF8.GetBytes(jsonString), "application/json", fileName);
          }
     }
 }

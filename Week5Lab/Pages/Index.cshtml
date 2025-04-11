@@ -2,33 +2,39 @@
 @model Week5Lab.Pages.IndexModel
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
-    ViewData["Title"] = "Class Management - Week 6";
+    ViewData["Title"] = "Class Management - Week 7 Export";
 }
 
 @* Using CDN links for simplicity, ensure you have internet access or use LibMan *@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" />
-@* Assuming icon images are in wwwroot/images *@
+
+@* Inline styles for column selection (Alternatively, put in site.css) *@
+<style>
+    th.selectable-column {
+        cursor: pointer;
+        user-select: none; /* Prevent text selection on click */
+        position: relative;
+    }
+
+    th.selectable-column.column-selected {
+        background-color: #0d6efd; /* Bootstrap primary blue */
+        color: white;
+    }
+    th.selectable-column.column-selected::after {
+        content: ' \2713'; /* Unicode checkmark */
+        font-size: 0.8em;
+    }
+</style>
+
 
 <div class="container mt-4">
     <div class="row">
         <div class="col-md-4 mb-4">
+            @* Add/Edit Form remains the same *@
             <h4>@(Model.IsEditing ? "Edit Class" : "Add Class")</h4>
             <form method="post" asp-page-handler="Add">
-                @* Hidden input for the ID, crucial for updates *@
                 <input type="hidden" asp-for="ClassItem.Id" />
-
-                 @* Hidden fields to pass back current filter/page state IF the form submission fails validation
-                     This helps retain the user's view context.
-                     Alternatively, handle this purely in OnPostAdd by re-running OnGet after validation failure.
-                     Let's keep it simple for now and rely on RedirectToPage after successful post.
-                 *@
-                @* <input type="hidden" name="CurrentPage" value="@Model.CurrentPage" />
-                   <input type="hidden" name="SearchClassName" value="@Model.SearchClassName" />
-                   <input type="hidden" name="MinStudentCount" value="@Model.MinStudentCount" />
-                   <input type="hidden" name="MaxStudentCount" value="@Model.MaxStudentCount" /> *@
-
-
                 <div class="mb-3">
                     <label asp-for="ClassItem.ClassName" class="form-label">Class Name</label>
                     <input asp-for="ClassItem.ClassName" class="form-control" />
@@ -42,161 +48,147 @@
                 <div class="mb-3">
                     <label asp-for="ClassItem.Description" class="form-label">Description</label>
                     <textarea asp-for="ClassItem.Description" class="form-control" rows="3"></textarea>
-                    @* No validation needed for Description based on previous code, but you could add it *@
                 </div>
-
-                @* Submit button text changes based on IsEditing *@
                 <button type="submit" class="btn btn-success">
                     @(Model.IsEditing ? "Update Class" : "Add Class")
                 </button>
-
-                @* Show Cancel button only when editing *@
                 @if (Model.IsEditing)
                 {
-                    <a asp-page="/Index"
-                       asp-route-currentPage="@Model.CurrentPage"
-                       asp-route-SearchClassName="@Model.SearchClassName"
-                       asp-route-MinStudentCount="@Model.MinStudentCount"
-                       asp-route-MaxStudentCount="@Model.MaxStudentCount"
-                       class="btn btn-secondary">Cancel Edit</a>
+                    <a asp-page="/Index" asp-route-currentPage="@Model.CurrentPage" asp-route-SearchClassName="@Model.SearchClassName" asp-route-MinStudentCount="@Model.MinStudentCount" asp-route-MaxStudentCount="@Model.MaxStudentCount" class="btn btn-secondary">Cancel Edit</a>
                 }
             </form>
         </div>
 
         <div class="col-md-8">
 
+            @* Filter Form remains the same *@
             <h4>Filter Classes</h4>
             <form method="get" class="row g-3 mb-3 p-3 border rounded bg-light">
                 <div class="col-md-4">
                     <label asp-for="SearchClassName" class="form-label" style="color: black;">Class Name Contains</label>
-                    <input asp-for="SearchClassName" class="form-control form-control-sm" />
+                    <input asp-for="SearchClassName" class="form-control form-control-sm" id="SearchClassName" />
                 </div>
                 <div class="col-md-3">
                     <label asp-for="MinStudentCount" class="form-label" style="color: black;">Min Students</label>
-                    <input type="number" asp-for="MinStudentCount" class="form-control form-control-sm" />
+                    <input type="number" asp-for="MinStudentCount" class="form-control form-control-sm" id="MinStudentCount" />
                 </div>
                 <div class="col-md-3">
                     <label asp-for="MaxStudentCount" class="form-label" style="color: black;">Max Students</label>
-                    <input type="number" asp-for="MaxStudentCount" class="form-control form-control-sm" />
+                    <input type="number" asp-for="MaxStudentCount" class="form-control form-control-sm" id="MaxStudentCount" />
                 </div>
                 <div class="col-md-2 align-self-end">
                     <button type="submit" class="btn btn-info btn-sm w-100">Filter</button>
                 </div>
-                 @* Hidden input to reset to page 1 when filter changes - optional but often desired *@
-                 @* <input type="hidden" name="CurrentPage" value="1" /> *@
-                 @* Or let the backend handle staying on the current page if possible *@
-
             </form>
+
+            @* --- UPDATED: Export Buttons (Added third button) --- *@
+            <div class="mb-3 d-flex flex-wrap gap-2"> @* Added flex-wrap for better responsiveness *@
+                <button id="exportFilteredJsonBtn" type="button" class="btn btn-sm btn-outline-primary">
+                    <i class="bi bi-file-earmark-code"></i> Filtrelenmiş Hepsini Export Et (JSON) @* Clarified text *@
+                </button>
+                <button id="exportAllJsonBtn" type="button" class="btn btn-sm btn-outline-secondary">
+                    <i class="bi bi-file-earmark-code-fill"></i> Tümünü Export Et (JSON)
+                </button>
+                @* --- NEW BUTTON --- *@
+                <button id="exportCurrentPageJsonBtn" type="button" class="btn btn-sm btn-outline-info">
+                    <i class="bi bi-file-earmark-spreadsheet"></i> Mevcut Sayfayı Export Et (JSON)
+                </button>
+                 @* --- END: NEW BUTTON --- *@
+            </div>
+            @* --- END: Export Buttons --- *@
 
 
             <h4>Class List</h4>
+            @* --- ADDED: Display Export Error Message from TempData --- *@
+            @if (TempData["ExportError"] != null)
+            {
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    @TempData["ExportError"]
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            }
+            @* --- END: Display Export Error Message --- *@
+
             @if (!Model.DisplayedClassList.Any() && Model.TotalCount > 0)
             {
-                 <div class="alert alert-warning">No items found on this page. Maybe try page 1?</div>
+                 <div class="alert alert-warning">Bu sayfada gösterilecek sınıf bulunamadı. Sayfa 1'i deneyin?</div>
             }
              else if (!Model.DisplayedClassList.Any())
              {
-                  <div class="alert alert-info">No classes found matching the criteria.</div>
+                  <div class="alert alert-info">Filtre kriterlerine uyan sınıf bulunamadı.</div>
              }
-
              else
-            {
-
-
-            <table class="table table-bordered table-hover table-striped">
-                <thead class="table-dark">
-                    <tr>
-                        @* <th>Id</th> NO ID COLUMN AS PER REQUIREMENT *@
-                        <th>Class Name</th>
-                        <th>Student Count</th>
-                        <th>Description</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @* Loop through the FILTERED and PAGINATED list *@
-                    @foreach (var item in Model.DisplayedClassList)
-                    {
+             {
+                @* Table structure remains the same, including selectable headers *@
+                <table class="table table-bordered table-hover table-striped">
+                    <thead class="table-dark">
                         <tr>
-                            @* <td>@item.Id</td> NO ID DATA *@
-                            <td>@item.ClassName</td>
-                            <td>@item.StudentCount</td>
-                            <td>@item.Description</td>
-                            <td class="d-flex gap-2 flex-wrap">  @* Use flex-wrap for smaller screens *@
-
-                                @* Edit Form (uses POST) *@
-                                <form method="post" asp-page-handler="Edit" asp-route-id="@item.Id" style="display:inline;">
-                                    @* Pass current view state back to the POST handler *@
-                                    <input type="hidden" name="CurrentPage" value="@Model.CurrentPage" />
-                                    <input type="hidden" name="SearchClassName" value="@Model.SearchClassName" />
-                                    <input type="hidden" name="MinStudentCount" value="@Model.MinStudentCount" />
-                                    <input type="hidden" name="MaxStudentCount" value="@Model.MaxStudentCount" />
-                                    <button type="submit" class="btn btn-sm btn-warning p-1" title="Edit">
-                                        <img src="~/images/icons8-edit.svg" alt="Edit" width="20" height="20" /> @* Ensure this path is correct *@
-                                    </button>
-                                </form>
-
-                                @* Delete Form (uses POST) *@
-                                <form method="post" asp-page-handler="Delete" asp-route-id="@item.Id" style="display:inline;">
-                                    @* Pass current view state back to the POST handler *@
-                                    <input type="hidden" name="CurrentPage" value="@Model.CurrentPage" />
-                                    <input type="hidden" name="SearchClassName" value="@Model.SearchClassName" />
-                                    <input type="hidden" name="MinStudentCount" value="@Model.MinStudentCount" />
-                                    <input type="hidden" name="MaxStudentCount" value="@Model.MaxStudentCount" />
-                                    <button type="submit" class="btn btn-sm btn-danger p-1" title="Delete" onclick="return confirm('Are you sure you want to delete @(item.ClassName?.Replace("'", "\\'"))?');"> @* Added JS escaping for names with apostrophes *@
-                                        <img src="~/images/icons8-delete.svg" alt="Delete" width="20" height="20" /> @* Ensure this path is correct *@
-                                    </button>
-                                </form>
-
-                            </td>
+                            <th class="selectable-column" data-column-name="ClassName">Class Name</th>
+                            <th class="selectable-column" data-column-name="StudentCount">Student Count</th>
+                            <th class="selectable-column" data-column-name="Description">Description</th>
+                            <th>Actions</th>
                         </tr>
-                    }
-                </tbody>
-            </table>
-
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.DisplayedClassList)
+                        {
+                            <tr>
+                                <td>@item.ClassName</td>
+                                <td>@item.StudentCount</td>
+                                <td>@item.Description</td>
+                                <td class="d-flex gap-2 flex-wrap">
+                                    @* Edit/Delete forms remain the same *@
+                                    <form method="post" asp-page-handler="Edit" asp-route-id="@item.Id" style="display:inline;">
+                                        <input type="hidden" name="CurrentPage" value="@Model.CurrentPage" />
+                                        <input type="hidden" name="SearchClassName" value="@Model.SearchClassName" />
+                                        <input type="hidden" name="MinStudentCount" value="@Model.MinStudentCount" />
+                                        <input type="hidden" name="MaxStudentCount" value="@Model.MaxStudentCount" />
+                                        <button type="submit" class="btn btn-sm btn-warning p-1" title="Edit">
+                                            <img src="~/images/icons8-edit.svg" alt="Edit" width="20" height="20" />
+                                        </button>
+                                    </form>
+                                    <form method="post" asp-page-handler="Delete" asp-route-id="@item.Id" style="display:inline;">
+                                        <input type="hidden" name="CurrentPage" value="@Model.CurrentPage" />
+                                        <input type="hidden" name="SearchClassName" value="@Model.SearchClassName" />
+                                        <input type="hidden" name="MinStudentCount" value="@Model.MinStudentCount" />
+                                        <input type="hidden" name="MaxStudentCount" value="@Model.MaxStudentCount" />
+                                        <button type="submit" class="btn btn-sm btn-danger p-1" title="Delete" onclick="return confirm('\'@(item.ClassName?.Replace("'", "\\'"))\' sınıfını silmek istediğinizden emin misiniz?');">
+                                            <img src="~/images/icons8-delete.svg" alt="Delete" width="20" height="20" />
+                                        </button>
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
              } @* End of else block for table display *@
 
+            @* Pagination section - ADDED data-current-page attribute *@
             @if(Model.TotalPages > 0)
             {
-                <nav aria-label="Page navigation">
+                @* --- ADDED data attribute to pass current page to JS --- *@
+                <nav aria-label="Page navigation" data-current-page="@Model.CurrentPage">
                     <ul class="pagination justify-content-center">
-
                         @* Previous Button *@
                         <li class="page-item @(Model.CurrentPage <= 1 ? "disabled" : "")">
-                            <a class="page-link" asp-page="/Index"
-                               asp-route-currentPage="@(Model.CurrentPage - 1)"
-                               asp-route-SearchClassName="@Model.SearchClassName"
-                               asp-route-MinStudentCount="@Model.MinStudentCount"
-                               asp-route-MaxStudentCount="@Model.MaxStudentCount">Previous</a>
+                            <a class="page-link" asp-page="/Index" asp-route-currentPage="@(Model.CurrentPage - 1)" asp-route-SearchClassName="@Model.SearchClassName" asp-route-MinStudentCount="@Model.MinStudentCount" asp-route-MaxStudentCount="@Model.MaxStudentCount">Önceki</a>
                         </li>
-
-                        @* Page Number Buttons (Example: show limited page numbers) *@
-                        @* Basic: Show all pages *@
+                         @* Page Numbers *@
                          @for (int i = 1; i <= Model.TotalPages; i++)
                          {
                              <li class="page-item @(i == Model.CurrentPage ? "active" : "")">
-                                 <a class="page-link" asp-page="/Index"
-                                    asp-route-currentPage="@i"
-                                    asp-route-SearchClassName="@Model.SearchClassName"
-                                    asp-route-MinStudentCount="@Model.MinStudentCount"
-                                    asp-route-MaxStudentCount="@Model.MaxStudentCount">@i</a>
+                                 <a class="page-link" asp-page="/Index" asp-route-currentPage="@i" asp-route-SearchClassName="@Model.SearchClassName" asp-route-MinStudentCount="@Model.MinStudentCount" asp-route-MaxStudentCount="@Model.MaxStudentCount">@i</a>
                              </li>
                          }
-                        @* Add more sophisticated logic here for many pages (e.g., show first, last, current +/- 2) if needed *@
-
-
                         @* Next Button *@
                         <li class="page-item @(Model.CurrentPage >= Model.TotalPages ? "disabled" : "")">
-                            <a class="page-link" asp-page="/Index"
-                               asp-route-currentPage="@(Model.CurrentPage + 1)"
-                               asp-route-SearchClassName="@Model.SearchClassName"
-                               asp-route-MinStudentCount="@Model.MinStudentCount"
-                               asp-route-MaxStudentCount="@Model.MaxStudentCount">Next</a>
+                            <a class="page-link" asp-page="/Index" asp-route-currentPage="@(Model.CurrentPage + 1)" asp-route-SearchClassName="@Model.SearchClassName" asp-route-MinStudentCount="@Model.MinStudentCount" asp-route-MaxStudentCount="@Model.MaxStudentCount">Sonraki</a>
                         </li>
                     </ul>
                 </nav>
+                @* Page Info display remains the same *@
                 <div class="text-center text-white bg-dark p-2">
-                    Page @Model.CurrentPage of @Model.TotalPages (Total matching classes: @Model.TotalCount)
+                    Sayfa @Model.CurrentPage / @Model.TotalPages (Toplam Eşleşen Sınıf: @Model.TotalCount)
                 </div>
             }
 
@@ -206,6 +198,85 @@
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
-    @* Add Bootstrap JS if needed for any components, though not strictly required for this example *@
-    @* <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> *@
+
+    @* --- UPDATED: JavaScript for Column Selection and ALL Export Modes --- *@
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get references to UI elements
+            const selectableColumns = document.querySelectorAll('th.selectable-column');
+            const exportFilteredBtn = document.getElementById('exportFilteredJsonBtn');
+            const exportAllBtn = document.getElementById('exportAllJsonBtn');
+            const exportCurrentPageBtn = document.getElementById('exportCurrentPageJsonBtn'); // New button
+            const paginationNav = document.querySelector('nav[aria-label="Page navigation"]'); // For reading current page
+
+            // --- Column Selection Logic ---
+            selectableColumns.forEach(th => {
+                th.addEventListener('click', function () {
+                    this.classList.toggle('column-selected');
+                });
+            });
+
+            // --- Unified Export Button Logic ---
+            function handleExport(exportMode) {
+                // 1. Get selected columns
+                const selectedThs = document.querySelectorAll('th.selectable-column.column-selected');
+                const selectedColumns = Array.from(selectedThs).map(th => th.getAttribute('data-column-name'));
+
+                // 2. Get current filter values
+                const searchClassName = document.getElementById('SearchClassName')?.value || '';
+                const minStudentCount = document.getElementById('MinStudentCount')?.value || '';
+                const maxStudentCount = document.getElementById('MaxStudentCount')?.value || '';
+
+                // 3. Get current page number (needed only for 'currentPage' mode)
+                // Read from the data attribute added to the <nav> element
+                const currentPageNum = paginationNav?.dataset.currentPage || '1';
+
+                // 4. Construct the URL for the backend handler
+                const url = new URL('@Url.Page("/Index", "ExportJson")', window.location.origin);
+                url.searchParams.append('exportMode', exportMode);
+
+                // Append filter values (needed by 'filtered' and 'currentPage' modes)
+                url.searchParams.append('searchClassName', searchClassName);
+                url.searchParams.append('minStudentCount', minStudentCount);
+                url.searchParams.append('maxStudentCount', maxStudentCount);
+
+                // Append selected columns (if any)
+                 if (selectedColumns.length > 0) {
+                    selectedColumns.forEach(col => {
+                        if(col) { url.searchParams.append('selectedColumns', col); }
+                    });
+                 }
+
+                // *** Append current page number ONLY if exporting current page ***
+                if (exportMode === 'currentPage') {
+                    url.searchParams.append('currentPage', currentPageNum);
+                }
+
+                // 5. Trigger the download
+                console.log("Requesting Export URL:", url.toString());
+                window.location.href = url.toString();
+            }
+
+            // Add event listeners to all export buttons
+            if (exportFilteredBtn) {
+                exportFilteredBtn.addEventListener('click', function () {
+                    handleExport('filtered'); // Mode for exporting ALL filtered items
+                });
+            }
+            if (exportAllBtn) {
+                exportAllBtn.addEventListener('click', function () {
+                    handleExport('all'); // Mode for exporting everything
+                });
+            }
+            if (exportCurrentPageBtn) { // Add listener for the new button
+                exportCurrentPageBtn.addEventListener('click', function () {
+                    handleExport('currentPage'); // Mode for exporting just the visible page
+                });
+            }
+        });
+    </script>
+    @* --- END: JavaScript --- *@
+
+    @* Include Bootstrap JS bundle if needed for dismissible alerts etc. *@
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 }
