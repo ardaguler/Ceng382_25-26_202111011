@@ -1,0 +1,97 @@
+﻿@using Microsoft.AspNetCore.Http // Needed to access HttpContext.Session
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    @* --- UPDATED: Title --- *@
+    <title>@ViewData["Title"] - Week8Lab</title>
+    @* Removed the empty importmap script as it might cause issues if not used *@
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    @* If you have a Week5Lab.styles.css, you might need to rename it and update this link too *@
+    @* <link rel="stylesheet" href="~/Week5Lab.styles.css" asp-append-version="true" /> *@
+    <link rel="stylesheet" href="~/Week8Lab.styles.css" asp-append-version="true" /> @* Assuming the styles file is renamed *@
+</head>
+<body>
+    <header>
+        @* Using a dark theme for the navbar as in the original code *@
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3">
+            <div class="container">
+                @* --- UPDATED: Navbar Brand --- *@
+                <a class="navbar-brand" asp-area="" asp-page="/Index">Week8Lab</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    @* Left-aligned navigation items *@
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            @* Using text-light for dark background *@
+                            <a class="nav-link text-light" asp-area="" asp-page="/Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-page="/Privacy">Privacy</a>
+                        </li>
+                        @* Add other main navigation links here if needed *@
+                    </ul>
+
+                    @* --- LOGIN/LOGOUT SECTION START --- *@
+                    @* Right-aligned section for login status and actions *@
+                    <ul class="navbar-nav">
+                        @* Check if the 'username' exists in the session *@
+                        @if (!string.IsNullOrEmpty(Context.Session.GetString("username")))
+                        {
+                            // User is logged in
+                            <li class="nav-item">
+                                @* Display a welcome message with the username *@
+                                <span class="navbar-text text-light me-3"> @* Using text-light and margin-end *@
+                                    Hello, @Context.Session.GetString("username")!
+                                </span>
+                            </li>
+                            <li class="nav-item">
+                                @* Display the Logout button *@
+                                <a class="btn btn-outline-danger btn-sm" asp-area="" asp-page="/Logout">Logout</a>
+                            </li>
+                        }
+                        else
+                        {
+                            // User is not logged in
+                            <li class="nav-item">
+                                @* Display the Login link *@
+                                <a class="nav-link text-light" asp-area="" asp-page="/Login">Login</a>
+                            </li>
+                        }
+                    </ul>
+                    @* --- LOGIN/LOGOUT SECTION END --- *@
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody() @* This is where the content of individual pages goes *@
+        </main>
+    </div>
+
+    @* --- FOOTER UPDATED --- *@
+    @* Removed bg-dark, kept text-light for the main text *@
+    <footer class="border-top footer text-light pt-3"> @* Removed bg-dark, kept text-light *@
+        <div class="container">
+             @* --- UPDATED: Footer Text --- *@
+            &copy; @DateTime.Now.Year - Week8Lab - <a asp-area="" asp-page="/Privacy">Privacy</a> @* Removed text-light from link, it might inherit or use default link color *@
+        </div>
+    </footer>
+    @* --- END FOOTER UPDATE --- *@
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @* This renders scripts defined in specific pages (like _ValidationScriptsPartial) *@
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

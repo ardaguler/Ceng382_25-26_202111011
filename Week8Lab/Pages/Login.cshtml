@@ -1,0 +1,78 @@
+@page // This directive indicates that the file is a Razor Page.
+@model Week8Lab.Pages.LoginModel // Specifies which PageModel class this page uses.
+@{
+    ViewData["Title"] = "Login";
+    // If we don't want to use the main layout, we can uncomment the line below.
+    // Usually, the login page uses the main layout too.
+    // Layout = null;
+}
+
+@*
+AI Prompts for Login.cshtml:
+
+// Prompt: "Create a Razor Page HTML form for login with Username and Password fields."
+// Prompt: "Style the login form using Bootstrap 5 (floating labels, centered)."
+// Prompt: "Show how to display an error message from Model.ErrorMessage on the login page."
+// Prompt: "Add client-side validation scripts and spans to the login form."
+
+*@
+
+<h1 class="text-center">Login</h1>
+
+<div class="row justify-content-center">
+    <div class="col-md-4">
+        @* Login Form *@
+        <form method="post">
+            <hr />
+            @* Error Message Area *@
+            @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+            {
+                <div class="alert alert-danger" role="alert">
+                    @Model.ErrorMessage
+                </div>
+            }
+
+            @* Username Input *@
+            <div class="form-floating mb-3">
+                @* Input field bound to Model.InputUsername property *@
+                <input asp-for="InputUsername" class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" />
+                @* Label for the input *@
+                <label asp-for="InputUsername" class="form-label">Username</label>
+                @* Validation error message (if any) *@
+                <span asp-validation-for="InputUsername" class="text-danger"></span>
+            </div>
+
+            @* Password Input *@
+            <div class="form-floating mb-3">
+                @* Input field bound to Model.InputPassword property *@
+                <input asp-for="InputPassword" type="password" class="form-control" autocomplete="current-password" aria-required="true" placeholder="password" />
+                @* Label for the input *@
+                <label asp-for="InputPassword" class="form-label">Password</label>
+                @* Validation error message (if any) *@
+                <span asp-validation-for="InputPassword" class="text-danger"></span>
+            </div>
+
+            @* Submit Button *@
+            <div>
+                <button id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary">Log in</button>
+            </div>
+
+            @* Additional links that could be added later (e.g., password reset) *@
+            @*
+            <div class="mt-3">
+                <p>
+                    <a asp-page="./ForgotPassword">Forgot your password?</a>
+                </p>
+                <p>
+                    <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Register as a new user</a>
+                </p>
+            </div>
+            *@
+        </form>
+    </div>
+</div>
+
+@* Section to include client-side validation scripts *@
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
