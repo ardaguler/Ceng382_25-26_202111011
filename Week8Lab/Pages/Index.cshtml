@@ -1,54 +1,51 @@
 ﻿@page
+@* Model direktifinin doğru IndexModel'i gösterdiğinden emin ol (önceki adımda güncellediğimiz) *@
 @model Week8Lab.Pages.IndexModel
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
-    ViewData["Title"] = "Class Management - Week 7 Export";
+    ViewData["Title"] = "Class Management - Week 9 DB"; // <-- Başlığı güncelleyebilirsin
 }
 
-@* Using CDN links for simplicity, ensure you have internet access or use LibMan *@
+@* CDN linkleri ve style kısmı aynı kalabilir *@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" />
-
-@* Inline styles for column selection (Alternatively, put in site.css) *@
 <style>
-    th.selectable-column {
-        cursor: pointer;
-        user-select: none; /* Prevent text selection on click */
-        position: relative;
-    }
-
-    th.selectable-column.column-selected {
-        background-color: #0d6efd; /* Bootstrap primary blue */
-        color: white;
-    }
-    th.selectable-column.column-selected::after {
-        content: ' \2713'; /* Unicode checkmark */
-        font-size: 0.8em;
-    }
+    /* Style kısmı aynı kalabilir */
+    th.selectable-column { cursor: pointer; user-select: none; position: relative; }
+    th.selectable-column.column-selected { background-color: #0d6efd; color: white; }
+    th.selectable-column.column-selected::after { content: ' \2713'; font-size: 0.8em; }
 </style>
-
 
 <div class="container mt-4">
     <div class="row">
         <div class="col-md-4 mb-4">
-            @* Add/Edit Form remains the same *@
             <h4>@(Model.IsEditing ? "Edit Class" : "Add Class")</h4>
+            @* Formun modeli ClassItem'ın türü Class olarak değiştirilmişti (arka planda) *@
             <form method="post" asp-page-handler="Add">
                 <input type="hidden" asp-for="ClassItem.Id" />
                 <div class="mb-3">
-                    <label asp-for="ClassItem.ClassName" class="form-label">Class Name</label>
-                    <input asp-for="ClassItem.ClassName" class="form-control" />
-                    <span asp-validation-for="ClassItem.ClassName" class="text-danger"></span>
+                     @* Label'ın asp-for'u Class modelindeki 'Name' olmalı *@
+                    <label asp-for="ClassItem.Name" class="form-label">Class Name</label>
+                    <input asp-for="ClassItem.Name" class="form-control" />
+                    <span asp-validation-for="ClassItem.Name" class="text-danger"></span>
                 </div>
                 <div class="mb-3">
-                    <label asp-for="ClassItem.StudentCount" class="form-label">Student Count</label>
-                    <input type="number" asp-for="ClassItem.StudentCount" class="form-control" />
-                    <span asp-validation-for="ClassItem.StudentCount" class="text-danger"></span>
+                    @* Label'ın asp-for'u Class modelindeki 'PersonCount' olmalı *@
+                    <label asp-for="ClassItem.PersonCount" class="form-label">Student Count</label>
+                    <input type="number" asp-for="ClassItem.PersonCount" class="form-control" />
+                    <span asp-validation-for="ClassItem.PersonCount" class="text-danger"></span>
                 </div>
-                <div class="mb-3">
+                 <div class="mb-3">
+                     @* Label'ın asp-for'u Class modelindeki 'Description' olmalı *@
                     <label asp-for="ClassItem.Description" class="form-label">Description</label>
                     <textarea asp-for="ClassItem.Description" class="form-control" rows="3"></textarea>
+                     <span asp-validation-for="ClassItem.Description" class="text-danger"></span> @* <- Açıklama için doğrulama eklenebilir *@
                 </div>
+                 @* IsActive alanı için bir Checkbox eklenebilir (Add/Edit formu için) *@
+                 <div class="mb-3 form-check">
+                     <input type="checkbox" class="form-check-input" asp-for="ClassItem.IsActive">
+                     <label class="form-check-label" asp-for="ClassItem.IsActive">Is Active?</label>
+                 </div>
                 <button type="submit" class="btn btn-success">
                     @(Model.IsEditing ? "Update Class" : "Add Class")
                 </button>
@@ -60,11 +57,10 @@
         </div>
 
         <div class="col-md-8">
-
-            @* Filter Form remains the same *@
+            @* Filtreleme formu aynı kalabilir (arka plan kodu DB'ye göre güncellendi) *@
             <h4>Filter Classes</h4>
             <form method="get" class="row g-3 mb-3 p-3 border rounded bg-light">
-                <div class="col-md-4">
+                 <div class="col-md-4">
                     <label asp-for="SearchClassName" class="form-label" style="color: black;">Class Name Contains</label>
                     <input asp-for="SearchClassName" class="form-control form-control-sm" id="SearchClassName" />
                 </div>
@@ -81,59 +77,51 @@
                 </div>
             </form>
 
-            @* --- UPDATED: Export Buttons --- *@
-            <div class="mb-3 d-flex flex-wrap gap-2"> @* Added flex-wrap for better responsiveness *@
-                <button id="exportFilteredJsonBtn" type="button" class="btn btn-sm btn-outline-primary">
+            @* Export butonları aynı kalabilir (arka plan kodu DB'ye göre güncellendi) *@
+            <div class="mb-3 d-flex flex-wrap gap-2">
+                 <button id="exportFilteredJsonBtn" type="button" class="btn btn-sm btn-outline-primary">
                     <i class="bi bi-file-earmark-code"></i> Export Filtered (JSON)
                 </button>
                 <button id="exportAllJsonBtn" type="button" class="btn btn-sm btn-outline-secondary">
                     <i class="bi bi-file-earmark-code-fill"></i> Export All (JSON)
                 </button>
             </div>
-            @* --- END: Export Buttons --- *@
-
 
             <h4>Class List</h4>
-            @* --- ADDED: Display Export Error Message from TempData --- *@
-            @if (TempData["ExportError"] != null)
-            {
-                <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                    @TempData["ExportError"]
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
-            }
-            @* --- END: Display Export Error Message --- *@
+            @* Hata mesajı kısmı aynı kalabilir *@
+            @if (TempData["ExportError"] != null) { /* ... Hata mesajı ... */ }
 
-            @if (!Model.DisplayedClassList.Any() && Model.TotalCount > 0)
+            @* Uyarı mesajları aynı kalabilir *@
+            @if (!Model.DisplayedClassList.Any() && Model.TotalCount > 0) { /* ... Uyarı ... */ }
+            else if (!Model.DisplayedClassList.Any()) { /* ... Uyarı ... */ }
+            else
             {
-                 <div class="alert alert-warning">No classes found on this page. Try page 1?</div> @* <-- Metin güncellendi *@
-            }
-             else if (!Model.DisplayedClassList.Any())
-             {
-                  <div class="alert alert-info">No classes found matching the filter criteria.</div> @* <-- Metin güncellendi *@
-             }
-             else
-             {
-                @* Table structure remains the same, including selectable headers *@
                 <table class="table table-bordered table-hover table-striped">
                     <thead class="table-dark">
                         <tr>
-                            <th class="selectable-column" data-column-name="ClassName">Class Name</th>
-                            <th class="selectable-column" data-column-name="StudentCount">Student Count</th>
+                            @* Kolon başlıklarını Class modeline göre güncelleyelim *@
+                            @* Id kolonunu istersen ekleyebilirsin: <th class="selectable-column" data-column-name="Id">ID</th> *@
+                            <th class="selectable-column" data-column-name="Name">Class Name</th> @* <-- data-column-name güncellendi *@
+                            <th class="selectable-column" data-column-name="PersonCount">Student Count</th> @* <-- data-column-name güncellendi *@
                             <th class="selectable-column" data-column-name="Description">Description</th>
+                            <th class="selectable-column" data-column-name="IsActive">Is Active?</th> @* <-- Yeni başlık eklendi *@
                             <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
+                         @* Döngüdeki 'item' artık 'Class' türünde *@
                         @foreach (var item in Model.DisplayedClassList)
                         {
                             <tr>
-                                <td>@item.ClassName</td>
-                                <td>@item.StudentCount</td>
+                                @* Id'yi göstermek istersen: <td>@item.Id</td> *@
+                                <td>@item.Name</td> @* <-- ClassName yerine Name *@
+                                <td>@item.PersonCount</td> @* <-- StudentCount yerine PersonCount *@
                                 <td>@item.Description</td>
+                                <td>@(item.IsActive ? "Yes" : "No")</td> @* <-- IsActive gösterimi eklendi *@
                                 <td class="d-flex gap-2 flex-wrap">
-                                    @* Edit/Delete forms remain the same *@
+                                    @* Edit/Delete formları item.Id kullandığı için aynı kalabilir *@
                                     <form method="post" asp-page-handler="Edit" asp-route-id="@item.Id" style="display:inline;">
+                                        @* Hidden inputlar aynı kalabilir *@
                                         <input type="hidden" name="CurrentPage" value="@Model.CurrentPage" />
                                         <input type="hidden" name="SearchClassName" value="@Model.SearchClassName" />
                                         <input type="hidden" name="MinStudentCount" value="@Model.MinStudentCount" />
@@ -143,11 +131,13 @@
                                         </button>
                                     </form>
                                     <form method="post" asp-page-handler="Delete" asp-route-id="@item.Id" style="display:inline;">
+                                         @* Hidden inputlar aynı kalabilir *@
                                         <input type="hidden" name="CurrentPage" value="@Model.CurrentPage" />
                                         <input type="hidden" name="SearchClassName" value="@Model.SearchClassName" />
                                         <input type="hidden" name="MinStudentCount" value="@Model.MinStudentCount" />
                                         <input type="hidden" name="MaxStudentCount" value="@Model.MaxStudentCount" />
-                                        <button type="submit" class="btn btn-sm btn-danger p-1" title="Delete" onclick="return confirm('Are you sure you want to delete the class \'@(item.ClassName?.Replace("'", "\\'"))\'?');"> @* <-- Metin güncellendi *@
+                                         @* Onay mesajında item.Name kullanıldı *@
+                                        <button type="submit" class="btn btn-sm btn-danger p-1" title="Delete" onclick="return confirm('Are you sure you want to delete the class \'@(item.Name?.Replace("'", "\\'"))\'?');">
                                             <img src="~/images/icons8-delete.svg" alt="Delete" width="20" height="20" />
                                         </button>
                                     </form>
@@ -156,33 +146,16 @@
                         }
                     </tbody>
                 </table>
-             } @* End of else block for table display *@
+            } @* End of else block *@
 
-            @* Pagination section - UPDATED TEXTS *@
+            @* Pagination kısmı aynı kalabilir *@
             @if(Model.TotalPages > 0)
             {
                 <nav aria-label="Page navigation" data-current-page="@Model.CurrentPage">
-                    <ul class="pagination justify-content-center">
-                        @* Previous Button *@
-                        <li class="page-item @(Model.CurrentPage <= 1 ? "disabled" : "")">
-                            <a class="page-link" asp-page="/Index" asp-route-currentPage="@(Model.CurrentPage - 1)" asp-route-SearchClassName="@Model.SearchClassName" asp-route-MinStudentCount="@Model.MinStudentCount" asp-route-MaxStudentCount="@Model.MaxStudentCount">Previous</a> @* <-- Güncellendi *@
-                        </li>
-                         @* Page Numbers *@
-                         @for (int i = 1; i <= Model.TotalPages; i++)
-                         {
-                             <li class="page-item @(i == Model.CurrentPage ? "active" : "")">
-                                 <a class="page-link" asp-page="/Index" asp-route-currentPage="@i" asp-route-SearchClassName="@Model.SearchClassName" asp-route-MinStudentCount="@Model.MinStudentCount" asp-route-MaxStudentCount="@Model.MaxStudentCount">@i</a>
-                             </li>
-                         }
-                        @* Next Button *@
-                        <li class="page-item @(Model.CurrentPage >= Model.TotalPages ? "disabled" : "")">
-                            <a class="page-link" asp-page="/Index" asp-route-currentPage="@(Model.CurrentPage + 1)" asp-route-SearchClassName="@Model.SearchClassName" asp-route-MinStudentCount="@Model.MinStudentCount" asp-route-MaxStudentCount="@Model.MaxStudentCount">Next</a> @* <-- Güncellendi *@
-                        </li>
-                    </ul>
+                   @* ... pagination links ... *@
                 </nav>
-                @* Page Info display updated *@
                 <div class="text-center text-white bg-dark p-2">
-                    Page @Model.CurrentPage / @Model.TotalPages (Total Matching Classes: @Model.TotalCount) @* <-- Güncellendi *@
+                    Page @Model.CurrentPage / @Model.TotalPages (Total Matching Classes: @Model.TotalCount)
                 </div>
             }
 
@@ -192,79 +165,11 @@
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
-
-    @* --- UPDATED: JavaScript for Column Selection and REMAINING Export Modes --- *@
+    @* JavaScript kısmı (column selection, export) aynı kalabilir,
+        ANCAK data-column-name'lerin güncellendiğini unutma (Name, PersonCount, IsActive) *@
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Get references to UI elements
-            const selectableColumns = document.querySelectorAll('th.selectable-column');
-            const exportFilteredBtn = document.getElementById('exportFilteredJsonBtn');
-            const exportAllBtn = document.getElementById('exportAllJsonBtn');
-            const paginationNav = document.querySelector('nav[aria-label="Page navigation"]');
-
-            // --- Column Selection Logic ---
-            selectableColumns.forEach(th => {
-                th.addEventListener('click', function () {
-                    this.classList.toggle('column-selected');
-                });
-            });
-
-            // --- Unified Export Button Logic ---
-            function handleExport(exportMode) {
-                // 1. Get selected columns
-                const selectedThs = document.querySelectorAll('th.selectable-column.column-selected');
-                const selectedColumns = Array.from(selectedThs).map(th => th.getAttribute('data-column-name'));
-
-                // 2. Get current filter values
-                const searchClassName = document.getElementById('SearchClassName')?.value || '';
-                const minStudentCount = document.getElementById('MinStudentCount')?.value || '';
-                const maxStudentCount = document.getElementById('MaxStudentCount')?.value || '';
-
-                // 3. Get current page number
-                const currentPageNum = paginationNav?.dataset.currentPage || '1';
-
-                // 4. Construct the URL for the backend handler
-                const url = new URL('@Url.Page("/Index", "ExportJson")', window.location.origin);
-                url.searchParams.append('exportMode', exportMode);
-
-                // Append filter values (needed by 'filtered' mode)
-                url.searchParams.append('searchClassName', searchClassName);
-                url.searchParams.append('minStudentCount', minStudentCount);
-                url.searchParams.append('maxStudentCount', maxStudentCount);
-
-                // Append selected columns (if any)
-                 if (selectedColumns.length > 0) {
-                    selectedColumns.forEach(col => {
-                        if(col) { url.searchParams.append('selectedColumns', col); }
-                    });
-                 }
-
-                // *** Append current page number ONLY if exporting current page ***
-                // This part is kept for potential backend use, though not triggered by UI now.
-                if (exportMode === 'currentPage') {
-                    url.searchParams.append('currentPage', currentPageNum);
-                }
-
-                // 5. Trigger the download
-                console.log("Requesting Export URL:", url.toString());
-                window.location.href = url.toString();
-            }
-
-            // Add event listeners to remaining export buttons
-            if (exportFilteredBtn) {
-                exportFilteredBtn.addEventListener('click', function () {
-                    handleExport('filtered');
-                });
-            }
-            if (exportAllBtn) {
-                exportAllBtn.addEventListener('click', function () {
-                    handleExport('all');
-                });
-            }
-        });
+        // ... mevcut javascript kodun ...
+        // Export JS'indeki data-column-name'leri kontrol etmeyi unutma!
     </script>
-    @* --- END: JavaScript --- *@
-
-    @* Include Bootstrap JS bundle if needed for dismissible alerts etc. *@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 }
