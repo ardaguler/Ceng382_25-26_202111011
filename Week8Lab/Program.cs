@@ -1,6 +1,6 @@
 // ----- GEREKLİ USING İFADELERİ (En üste ekle veya kontrol et) -----
 using Microsoft.EntityFrameworkCore;
-using YourProjectNamespace.Data; // SchoolDbContext'in namespace'i - Kendi projenle değiştir!
+using Week8Lab.Data; // SchoolDbContext'in namespace'i - Kendi projenle değiştir!
 // Diğer mevcut using ifadeleri...
 
 // ----- MEVCUT KOD BAŞLANGICI -----

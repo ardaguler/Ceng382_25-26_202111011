@@ -1,38 +1,21 @@
-using System;
+using System.ComponentModel.DataAnnotations;
 
-// Projenizin ana namespace'i veya Models klasörünün namespace'i
-namespace Week8Lab.Models 
+namespace Week8Lab.Models // Projenin namespace'i
 {
-    /// <summary>
-    /// Kullanıcı giriş bilgilerini temsil eden sınıf.
-    /// users.json dosyasındaki yapı ile eşleşir.
-    /// </summary>
     public class User
     {
-        /// <summary>
-        /// Kullanıcı adını alır veya ayarlar.
-        /// </summary>
-        public string Username { get; set; } = string.Empty; // Null referans uyarılarını önlemek için başlangıç değeri
+        [Key] // Birincil anahtar
+        public int Id { get; set; }
 
-        /// <summary>
-        /// Kullanıcının parolasını alır veya ayarlar.
-        /// ÖNEMLİ: Gerçek uygulamalarda bu alan düz metin yerine parolanın hash'lenmiş halini tutmalıdır.
-        /// </summary>
-        public string Password { get; set; } = string.Empty; // Null referans uyarılarını önlemek için başlangıç değeri
+        [Required] // Zorunlu alan
+        [StringLength(100)] // Maksimum uzunluk
+        public string Username { get; set; } = null!; // Null atanabilirliği yönetmek için null!
 
-        /// <summary>
-        /// Kullanıcıya atanan rolü alır veya ayarlar (Örn: "Administrator", "User").
-        /// </summary>
-        public string Role { get; set; } = string.Empty; // Null referans uyarılarını önlemek için başlangıç değeri
+        [Required] // Zorunlu alan
+        public string PasswordHash { get; set; } = null!; // Şifrenin hash'lenmiş hali saklanacak
 
-        /// <summary>
-        /// Kullanıcı hesabının aktif olup olmadığını ve giriş yapıp yapamayacağını belirten değeri alır veya ayarlar.
-        /// </summary>
-        public bool IsActive { get; set; }
-
-        /// <summary>
-        /// Kullanıcı hesabının oluşturulduğu tarih ve saati alır veya ayarlar.
-        /// </summary>
-        public DateTime CreatedAt { get; set; }
+        // İsteğe bağlı olarak başka alanlar eklenebilir (Email, Ad, Soyad vb.)
+        // public string? Email { get; set; }
+        // public string? FullName { get; set; }
     }
 }
