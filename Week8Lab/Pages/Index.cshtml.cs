@@ -1,3 +1,8 @@
+// "ASP.NET Core Razor Page'imde (Index.cshtml.cs) Entity Framework Core
+// kullanarak veritabanından tüm 'Class' kayıtlarını çekmek istiyorum. SchoolDbContext'i 
+// constructor injection ile nasıl alabilirim ve OnGetAsync metodunda bu verileri bir IList<Class> 
+// tipindeki ClassList adlı public bir property'ye nasıl atayabilirim?"
+
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;

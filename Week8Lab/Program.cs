@@ -1,4 +1,9 @@
-// ----- GEREKLİ USING İFADELERİ (En üste ekle veya kontrol et) -----
+// AI PROMPT: ASP.NET Core 6 (veya üstü) projemde Entity Framework Core kullanıyorum. 
+// SchoolDbContext adında bir DbContext'im var ve appsettings.json dosyamda 'SchoolDbConnection' 
+// adlı bir bağlantı dizesi tanımladım. Program.cs dosyamda DbContext'i SQL Server kullanacak şekilde 
+// nasıl kaydedebilirim 
+
+
 using Microsoft.EntityFrameworkCore;
 using Week8Lab.Data; // SchoolDbContext'in namespace'i - Kendi projenle değiştir!
 // Diğer mevcut using ifadeleri...

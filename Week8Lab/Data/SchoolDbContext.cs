@@ -1,4 +1,10 @@
-﻿using System;
+﻿// "Entity Framework Core kullanarak bir DbContext sınıfı oluşturmam gerekiyor. 
+// Sınıfımın adı 'SchoolDbContext' olacak ve 'YourProjectNamespace.Models' namespace'indeki 
+// 'Class' adlı bir entity için DbSet tanımlaması içerecek. Ayrıca, constructor'ında DbContextOptions 
+// alacak şekilde ayarlanmalı. Bu sınıf için C# kodunu yazar mısın?"
+
+
+using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Week8Lab.Models; // Class ve User modellerinin namespace'i
